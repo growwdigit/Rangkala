@@ -1,0 +1,110 @@
+.page {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: #faeada;
+}
+
+.header,
+.content,
+.footer {
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  width: 112px;
+  height: 112px;
+  border-radius: 28px;
+  box-shadow:
+    0 20px 40px -12px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.22);
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(100deg, #965443, #b06a52 55%, #cfac89);
+  box-shadow: 0 10px 26px -8px rgba(121, 62, 45, 0.4);
+}
+
+.title {
+  margin: 18px 0 10px;
+  font-family: 'Unbounded', system-ui, sans-serif;
+  font-size: clamp(38px, 8vw, 74px);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  background: linear-gradient(110deg, #7c412f, #965443 50%, #c99174);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.tagline {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: clamp(16px, 2.4vw, 20px);
+  color: #6f4a3a;
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 44px;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #965443;
+  background: #fff;
+  box-shadow:
+    0 8px 22px -10px rgba(121, 62, 45, 0.35),
+    inset 0 0 0 1px rgba(150, 84, 67, 0.25);
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.social-link svg {
+  width: 22px;
+  height: 22px;
+}
+
+.social-link:hover {
+  color: #fff;
+  background: #965443;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -10px rgba(121, 62, 45, 0.5);
+}
+
+.footer {
+  padding-top: 56px;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 13px;
+  color: #a98a74;
+}
