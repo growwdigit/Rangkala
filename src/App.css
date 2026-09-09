@@ -1,5 +1,7 @@
 .page {
-  min-height: 100svh;
+  height: 100vh;
+  height: 100svh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +10,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  overscroll-behavior: none;
   background: #faf7f2;
 }
 
@@ -208,4 +211,46 @@
   font-family: 'Space Grotesk', system-ui, sans-serif;
   font-size: 13px;
   color: #a98a74;
+}
+
+@media (max-height: 720px) {
+  .page {
+    padding: 20px 24px;
+  }
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+  .badge {
+    margin-top: 18px;
+    padding: 9px 22px;
+  }
+  .title {
+    margin: 12px 0 6px;
+  }
+  .tagline {
+    font-size: clamp(14px, 2vw, 17px);
+  }
+  .socials {
+    margin-top: 24px;
+  }
+  .footer {
+    padding-top: 24px;
+  }
+}
+
+@media (max-height: 600px) {
+  .logo {
+    width: 96px;
+    height: 96px;
+  }
+  .badge {
+    margin-top: 12px;
+  }
+  .socials {
+    margin-top: 16px;
+  }
+  .footer {
+    padding-top: 12px;
+  }
 }

@@ -4,6 +4,7 @@
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
+  overscroll-behavior: none;
 }
 .bgL {
   position: absolute;
