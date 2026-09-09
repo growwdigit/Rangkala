@@ -1,0 +1,93 @@
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.bgL {
+  position: absolute;
+  display: block;
+  height: auto;
+}
+.L-amb,
+.L-paper,
+.L-frame,
+.L-dust {
+  height: 100%;
+}
+.L-amb {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.L-paper {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.14;
+}
+.L-frame {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.L-pich {
+  bottom: -60px;
+  left: -70px;
+  width: min(40vw, 520px);
+  opacity: 0.4;
+}
+.L-tr {
+  top: -70px;
+  right: -80px;
+  width: min(30vw, 400px);
+  opacity: 0.5;
+}
+.L-dust {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .L-tr {
+    width: 55vw;
+    top: -12vw;
+    right: -14vw;
+    opacity: 0.45;
+  }
+  .L-pich {
+    width: 70vw;
+    left: -25vw;
+  }
+}
+
+@media (max-width: 560px) {
+  .L-tr {
+    width: 68vw;
+    top: -15vw;
+    right: -22vw;
+    opacity: 0.4;
+  }
+  .L-pich {
+    width: 82vw;
+    left: -32vw;
+    bottom: -8vw;
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 400px) {
+  .L-tr {
+    width: 76vw;
+    opacity: 0.35;
+  }
+  .L-pich {
+    width: 90vw;
+    left: -38vw;
+  }
+}

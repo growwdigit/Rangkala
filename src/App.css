@@ -8,7 +8,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: #faeada;
+  background: #faf7f2;
 }
 
 .header,
@@ -19,27 +19,59 @@
 }
 
 .logo {
-  width: 112px;
-  height: 112px;
-  border-radius: 28px;
-  box-shadow:
-    0 20px 40px -12px rgba(0, 0, 0, 0.6),
-    0 0 0 1px rgba(255, 255, 255, 0.22);
+  width: 170px;
+  height: 170px;
 }
 
 .badge {
   display: inline-block;
   margin-top: 28px;
-  padding: 8px 18px;
+  padding: 12px 28px;
   border-radius: 999px;
   font-family: 'Space Grotesk', system-ui, sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 3px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
   text-transform: uppercase;
   color: #fff;
   background: linear-gradient(100deg, #965443, #b06a52 55%, #cfac89);
-  box-shadow: 0 10px 26px -8px rgba(121, 62, 45, 0.4);
+  box-shadow:
+    0 10px 26px -8px rgba(121, 62, 45, 0.4),
+    0 0 0 1px rgba(150, 84, 67, 0.3);
+  animation: badge-pulse 2.5s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.badge::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: translateX(-100%);
+  animation: badge-shine 3s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% {
+    box-shadow:
+      0 10px 26px -8px rgba(121, 62, 45, 0.4),
+      0 0 0 1px rgba(150, 84, 67, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 10px 36px -6px rgba(121, 62, 45, 0.55),
+      0 0 0 1px rgba(150, 84, 67, 0.5);
+  }
+}
+
+@keyframes badge-shine {
+  0%, 70% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 .title {
@@ -54,6 +86,31 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
+}
+
+.title .kala {
+  font-size: 1.30em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(110deg, #7c412f, #965443 50%, #c99174);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: none;
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(0 0 28px rgba(212, 97, 74, 0.35));
+  animation: kala-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes kala-glow {
+  0% {
+    filter: drop-shadow(0 0 20px rgba(212, 97, 74, 0.3));
+  }
+  100% {
+    filter: drop-shadow(0 0 40px rgba(232, 165, 83, 0.5));
+  }
 }
 
 .tagline {
@@ -100,6 +157,50 @@
   background: #965443;
   transform: translateY(-3px);
   box-shadow: 0 14px 30px -10px rgba(121, 62, 45, 0.5);
+}
+
+.social-link.instagram {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+  gap: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 0.28s ease, padding 0.28s ease, gap 0.28s ease,
+    border-radius 0.28s ease, color 0.15s ease, background 0.15s ease,
+    transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.social-link.instagram svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: color 0.15s ease;
+}
+
+.social-text {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: opacity 0.2s ease, max-width 0.28s ease;
+}
+
+.social-link.instagram:hover {
+  width: 200px;
+  padding: 0 28px;
+  gap: 12px;
+  border-radius: 999px;
+}
+
+.social-link.instagram:hover .social-text {
+  opacity: 1;
+  max-width: 90px;
 }
 
 .footer {
